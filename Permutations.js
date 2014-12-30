@@ -5,7 +5,7 @@ Array.prototype.remove = function(from, to) {
     return this;
 };
 
-function t(n, a) {
+function permutate(n, a) {
   if (a.length === 0) {
      all.push(n);
   }
@@ -14,13 +14,13 @@ function t(n, a) {
      for(var i = 0; i < a.length; i++) {         
          var n_new = n.slice(0);
          n_new.push(a[i]);
-         t(n_new, a.slice(0).remove(i,i));
+         permutate(n_new, a.slice(0).remove(i,i));
      }
   }
 }
 
 var all = [];
-t([], [1, 2, 3, 4]);
+permutate([], [1, 2, 3, 4]);
 
 for(var i = 0; i < all.length; i++) {
     console.log(all[i]);
