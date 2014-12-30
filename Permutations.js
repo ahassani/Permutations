@@ -5,8 +5,6 @@ Array.prototype.remove = function(from, to) {
     return this;
 };
 
-//var clone = myArray.slice(0);
-
 var all = [];
 
 function t(n, a) {
