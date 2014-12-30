@@ -23,8 +23,8 @@ function t(n, a) {
   }
 }
 
-t([], [1,2,3,4]);
+t([], [1, 2, 3, 4]);
 
-for(var i=0; i<all.length; i++) {
+for(var i = 0; i < all.length; i++) {
     console.log(all[i]);
 }
