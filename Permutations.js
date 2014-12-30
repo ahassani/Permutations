@@ -5,8 +5,6 @@ Array.prototype.remove = function(from, to) {
     return this;
 };
 
-var all = [];
-
 function t(n, a) {
   if (a.length === 0) {
      all.push(n);
@@ -21,6 +19,7 @@ function t(n, a) {
   }
 }
 
+var all = [];
 t([], [1, 2, 3, 4]);
 
 for(var i = 0; i < all.length; i++) {
