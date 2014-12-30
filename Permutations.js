@@ -1,7 +1,8 @@
 Array.prototype.remove = function(from, to) {
     var rest = this.slice((to || from) + 1 || this.length);
     this.length = from < 0 ? this.length + from : from;
-    return this.push.apply(this, rest);
+    this.push.apply(this, rest)
+    return this;
 };
 
 //var clone = myArray.slice(0);
@@ -15,25 +16,19 @@ function t(n, a) {
   }
 
   else {
-     for(var i = 0; i < a.length; i++) {
-         var c = a.slice(0);
-         c.remove(i,i);
+     for(var i = 0; i < a.length; i++) {         
          var n_new = n.slice(0);
          n_new.push(a[i]);
-         t(n_new, c);
+         t(n_new, a.slice(0).remove(i,i));
      }
   }
 }
 
 t([], [1,2,3,4]);
 
-all;
+var all;
 
-var obj = {};
-var total = 0;
 
 for(var i=0; i<all.length; i++) {
-    var arr = all[i];
-    var cnt = 0;
-    console.log(arr);
+    console.log(all[i]);
 }
