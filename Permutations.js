@@ -10,7 +10,7 @@ Array.prototype.remove = function(from, to) {
 var all = [];
 
 function t(n, a) {
-  if (a.length===0) {
+  if (a.length === 0) {
      all.push(n);
   }
 
